@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda de Contatos</title>
-    <link rel="stylesheet" href="main.js">
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <header>
-        <h1>Cadastro de Contatos</h1>
+        <h1>Agenda de Contatos</h1>
     </header>
 
     <main>
@@ -16,17 +18,15 @@
             <div class="campo">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
+                <span class="error" id="nomeError"></span>
             </div>
             <div class="campo">
                 <label for="telefone">Telefone:</label>
                 <input type="tel" id="telefone" name="telefone" required>
+                <span class="error" id="telefoneError"></span>
             </div>
             <button type="submit">Cadastrar</button>
         </form>
-
-        <div class="filtro">
-            <input type="text" id="busca" placeholder="Pesquisar...">
-        </div>
 
         <table id="tabelaContatos">
             <thead>
@@ -42,4 +42,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
