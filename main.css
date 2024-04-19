@@ -1,84 +1,98 @@
-/* Redefinição de estilos */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* Estilos básicos */
+/* Regras Gerais */
 body {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    /* Cor de fundo clara */
-    color: #333;
-    /* Cor do texto escura */
+    color:#007bff;
 }
 
-/* Estilos do Cabeçalho */
-h1 ,h2{
+header {
+    background-color: #fff;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-/* Estilos da Tabela de Contatos */
-#tabelaContatos {
+/* Formulário */
+#formContato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    margin: 20px auto;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.campo label {
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.campo input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+#formContato button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Tabela */
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    /* Adiciona margem inferior à tabela */
+    margin: 20px 0;
 }
 
-#tabelaContatos th,
-#tabelaContatos td {
-    padding: 10px;
-    border: 1px solid #ddd;
+th,
+td {
+    padding: 8px;
+    border: 1px solid #ccc;
     text-align: left;
 }
 
-#tabelaContatos thead th {
-    background-color: #4CAF50;
-    color: white;
+th {
+    background-color: #eee;
+    text-align: center;
 }
 
-/* Estilos do Formulário */
-#formContato {
-    max-width: 500px;
-    /* Limita a largura do formulário */
-    margin: 0 auto;
-    /* Centraliza o formulário horizontalmente */
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    /* Adiciona margem inferior ao formulário */
+/* Tabela Responsiva */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th,
+    td {
+        white-space: nowrap;
+    }
 }
 
-#formContato label {
-    display: block;
-    margin-bottom: 5px;
+/* Filtro */
+.filtro {
+    margin-bottom: 10px;
 }
 
-#formContato input[type="text"],
-#formContato input[type="tel"] {
-    width: 100%;
+#busca {
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-#formContato button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    /* Adiciona efeito hover */
-}
-
-#formContato button[type="submit"]:hover {
-    background-color: #3e8e41;
-    /* Verde mais escuro no hover */
 }
